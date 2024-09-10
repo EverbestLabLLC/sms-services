@@ -22,8 +22,8 @@ public class SmsResource {
     private final SmsService sayqalSmsService;
     @PostMapping("/send")
     public ResponseEntity<SmsResponseDto> sendSms(@RequestBody @Valid SmsRequestDto dto) {
-        sayqalSmsService.send(dto.phone(), dto.message());
-        return ResponseEntity.ok().body(null);
+        var result = sayqalSmsService.send(dto.phone(), dto.message());
+        return ResponseEntity.ok().body(new SmsResponseDto(result, null));
     }
 
 }
