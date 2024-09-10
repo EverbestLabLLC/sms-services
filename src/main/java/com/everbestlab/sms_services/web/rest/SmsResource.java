@@ -19,9 +19,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/v1/sms")
 public class SmsResource {
 
-    private final SmsService smsService;
+    private final SmsService sayqalSmsService;
     @PostMapping("/send")
     public ResponseEntity<SmsResponseDto> sendSms(@RequestBody @Valid SmsRequestDto dto) {
+        sayqalSmsService.send(dto.phone(), dto.message());
         return ResponseEntity.ok().body(null);
     }
 

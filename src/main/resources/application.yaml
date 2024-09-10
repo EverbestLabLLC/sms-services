@@ -1,0 +1,10 @@
+spring:
+  application:
+  name: sms-services
+
+application:
+  sayqal:
+    url: ${sayqal_url}
+    login: ${sayqal_login}
+    password: ${sayqal_password}
+

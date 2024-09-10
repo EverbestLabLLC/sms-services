@@ -1,7 +1,7 @@
 package com.everbestlab.sms_services.services;
 
-import org.springframework.stereotype.Service;
+public interface SmsService {
 
-@Service
-public class SmsService {
+    boolean send(String phone, String message);
+
 }

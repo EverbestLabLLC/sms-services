@@ -9,10 +9,10 @@ SMS providerlar ro'yhati:
 
 Loyihadan dasturlashga endi kirib kelayotgan yoshlar ham namuna sifatida foydalanishi uchun unga bazi kichik imkoniyatlar qo'shib ketildi.
 Lohihada qo'shilgan imkoniyatlar:
- - Validatsiya
+ - Validatsiya, Spring default validations, Customs validation(sms/phone)
  - Testing, Mocking
  - Swagger
- - Patternlar(Strategiya, ...)
+ - Patternlar(Strategy, Builder)
 
 Agar sizda qo'shimcha qilishga qizish bo'lsa safimizga qo'shilsangiz bo'ladi. 
 Yoki yangi imkoniyat qo'shib berilishini hohlasangiz unda issue yaratishingiz mumkin. 
