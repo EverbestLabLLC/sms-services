@@ -7,6 +7,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 @ConfigurationProperties(prefix = "application")
 public class ApplicationProperties {
 
-    private SayqalProperties sayqal = new SayqalProperties();
+    private final SayqalProperties sayqal = new SayqalProperties();
+    private final GetSMSProperties getSms = new GetSMSProperties();
 
 }

@@ -13,12 +13,14 @@ import org.springframework.stereotype.Service;
 public class SmsStrategy {
 
     private final SmsService sayqalSmsService;
+    private final SmsService getSmsService;
 
     public ResponseEntity<SmsResponseDto> sendSms(SmsRequestDto smsRequestDto) {
         var result = false;
 
         switch (smsRequestDto.provider()) {
             case SAYQAL -> result = sayqalSmsService.send(smsRequestDto.phone(), smsRequestDto.message());
+            case GETSMS -> result = getSmsService.send(smsRequestDto.phone(), smsRequestDto.message());
         }
 
         return ResponseEntity.ok().body(new SmsResponseDto(result, null));

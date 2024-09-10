@@ -2,7 +2,6 @@ package com.everbestlab.sms_services.web.rest;
 
 import com.everbestlab.sms_services.domain.dto.SmsRequestDto;
 import com.everbestlab.sms_services.domain.dto.SmsResponseDto;
-import com.everbestlab.sms_services.services.SmsService;
 import com.everbestlab.sms_services.services.SmsStrategy;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;

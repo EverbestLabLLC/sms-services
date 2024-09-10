@@ -7,4 +7,7 @@ application:
     url: ${sayqal_url}
     login: ${sayqal_login}
     password: ${sayqal_password}
-
+  get-sms:
+    url: ${getsms_url}
+    login: ${getsms_login}
+    password: ${getsms_password}
