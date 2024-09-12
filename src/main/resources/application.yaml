@@ -11,3 +11,7 @@ application:
     url: ${getsms_url}
     login: ${getsms_login}
     password: ${getsms_password}
+  eskiz:
+    url: ${eskiz_url}
+    email: ${eskiz_email}
+    password: ${eskiz_password}

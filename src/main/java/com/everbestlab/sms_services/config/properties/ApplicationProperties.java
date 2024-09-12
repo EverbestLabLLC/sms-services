@@ -9,5 +9,6 @@ public class ApplicationProperties {
 
     private final SayqalProperties sayqal = new SayqalProperties();
     private final GetSMSProperties getSms = new GetSMSProperties();
+    private final EskizProperties eskiz = new EskizProperties();
 
 }

@@ -7,7 +7,6 @@ import com.everbestlab.sms_services.sayqal.domain.ServiceData;
 import com.everbestlab.sms_services.services.SmsService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.context.annotation.Primary;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
@@ -18,7 +17,6 @@ import org.springframework.web.client.RestTemplate;
 import java.util.Random;
 
 @Slf4j
-@Primary
 @RequiredArgsConstructor
 @Service("sayqalSmsService")
 public class SayqalSmsServiceImpl implements SmsService {
