@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet id="965b8003-6a57-4ce3-a76f-63477cd81ef6" author="Ulug'bek Ro'zimboyev">
+
+        <createSequence sequenceName="sms_histories_id_sequence"
+                        incrementBy="1"
+                        startValue="1"/>
+
+        <createTable tableName="sms_histories">
+            <column name="id" type="bigint">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="phone_number" type="varchar(12)"/>
+            <column name="created_date" type="TIMESTAMP"/>
+        </createTable>
+
+    </changeSet>
+</databaseChangeLog>

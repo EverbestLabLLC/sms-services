@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  smsServicedb:
+    image: postgres:16.4
+    hostname: db.sms-service.uz
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
+    environment:
+      POSTGRES_PASSWORD: "root123"
+    volumes:
+      - ./storage/db/data:/var/lib/postgresql/data
+      - ./storage/backup:/backup
+      - /etc/timezone:/etc/timezone
+      - /etc/localtime:/etc/localtime:ro
+    healthcheck:
+      test: [ "CMD", "pg_isready", "-U", "postgres" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5

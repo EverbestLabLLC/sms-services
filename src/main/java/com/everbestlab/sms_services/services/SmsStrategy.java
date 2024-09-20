@@ -15,6 +15,7 @@ public class SmsStrategy {
     private final SmsService sayqalSmsService;
     private final SmsService getSmsService;
     private final SmsService eskizSmsService;
+    private final SmsHistoryService smsHistoryService;
 
     public ResponseEntity<SmsResponseDto> sendSms(SmsRequestDto smsRequestDto) {
         var result = false;
@@ -24,6 +25,8 @@ public class SmsStrategy {
             case GETSMS -> result = getSmsService.send(smsRequestDto.phone(), smsRequestDto.message());
             case ESKIZ -> result = eskizSmsService.send(smsRequestDto.phone(), smsRequestDto.message());
         }
+
+        smsHistoryService.save(smsRequestDto.phone());
 
         return ResponseEntity.ok().body(new SmsResponseDto(result, null));
     }

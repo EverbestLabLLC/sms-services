@@ -1,6 +1,23 @@
 spring:
   application:
     name: sms-services
+  liquibase:
+    contexts: dev
+    change-log: classpath:db/changelog/db.changelog-master.xml
+    enabled: true
+    user: postgres
+    url: jdbc:postgresql://localhost:5432/postgres
+    password: root123
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: root123
+    hikari:
+      poolName: Hikari
+      auto-commit: false
+  jpa:
+    show-sql: true
 
 application:
   sayqal:
