@@ -16,7 +16,7 @@ import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
-public class SmsStrategyTestWithMockExtension {
+public class SmsStrategyWithMockExtensionTest {
 
     public static final String PHONE = "testPhone";
     public static final String MESSAGE = "test";
